@@ -218,31 +218,43 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-12" id="casoduso">Registrar Obra</div>
+                <div class="col-sm-12" id="casoduso">Información de Bodegas</div>
             </div>
             <div class="row">
                 
                     <div class="container form-user-f">
-                        <form class="form-user">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Nombre de la Obra">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Teléfono de la Obra">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Dirección de la Obra">
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputText1">Seleccionar Ing. Residente</label> <br>
+                        <table class="table table-borderless table-p">
+                            <thead class="thead">
+                              <tr>
+                              <th>Nombre de la bodega</th>
+                              <th>Direccion</th>
+                              <th>Telefono</th>
+                              <th>Detalles</th>
                               
-                              <div class="alert alert-dark" role="alert">¡No Hay
-                                Residentes Disponibles!</div>
-                              <span name="id" value=" "></span>
-                              </select>
-                            </div>
-                            <button type="submit" class="btn btn-warning btn-form">Registrar Obra</button>
-                          </form>
+                            </tr>
+                           
+                            <tbody>
+                            
+                              <tr>
+                                <td>Bodega1</td>
+                                <td>Dirección1</td>
+                                <td>Telefóno1</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-ver"><a href="Bodegas.jsp?id=<%=e.getIdBodega()%>" ><font color=white>Ver <i class="far fa-eye"></font></a></i></button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Bodega2</td>
+                                <td>Dirección2</td>
+                                <td>Telefóno2</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-ver"><a href="Bodegas.jsp?id=<%=e.getIdBodega()%>" ><font color=white>Ver <i class="far fa-eye"></font></a></i></button>
+                                </td>
+                              </tr>
+                          
+                            </tbody>
+                            </thead>
+                          </table>
                     </div>
                 
             </div>

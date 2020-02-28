@@ -218,31 +218,44 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-12" id="casoduso">Registrar Obra</div>
+                <div class="col-sm-12" id="casoduso">Información de los Ing. Residentes</div>
             </div>
             <div class="row">
                 
                     <div class="container form-user-f">
-                        <form class="form-user">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Nombre de la Obra">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Teléfono de la Obra">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Dirección de la Obra">
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputText1">Seleccionar Ing. Residente</label> <br>
+                        <table class="table table-borderless table-p">
+                            <thead class="thead">
+                              <tr>
+                              <th>Nombre</th>
+                              <th>Teléfono</th>
+                              <th>Dirección</th>
+                              <th>DNI</th>
+                              <th>Estado</th>
                               
-                              <div class="alert alert-dark" role="alert">¡No Hay
-                                Residentes Disponibles!</div>
-                              <span name="id" value=" "></span>
-                              </select>
-                            </div>
-                            <button type="submit" class="btn btn-warning btn-form">Registrar Obra</button>
-                          </form>
+                            </tr>
+                           
+                            <tbody>
+                            
+                              <tr>
+                                <td>Juan Fuentes</td>
+                                <td>3222222222</td>
+                                <td>av el rio</td>
+                                <td>10000000</td>
+                                <td>Libre</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>Eduardo Cantillo</td>
+                                <td>3222222223</td>
+                                <td>av ceiba</td>
+                                <td>10000001</td>
+                                <td>Ocupado</td>
+                                
+                              </tr>
+                          
+                            </tbody>
+                            </thead>
+                          </table>
                     </div>
                 
             </div>

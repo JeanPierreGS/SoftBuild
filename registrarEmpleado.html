@@ -99,8 +99,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Ver empleados:</h6>
-            <a class="collapse-item" href="login.html">Residenes</a>
-            <a class="collapse-item" href="register.html">Almacenistas</a>
+            <a class="collapse-item" href="infoResidentes.html">Residenes</a>
+            <a class="collapse-item" href="infoAlmacenistas.html">Almacenistas</a>
           </div>
         </div>
       </li>
@@ -242,8 +242,14 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Dirección">
                             </div>
-                            
-                            <button type="submit" class="btn btn-warning">Registrar</button>
+                            <div class="form-group">
+                              <label for="exampleInputText1">Tipo de empleado</label> <br>
+                              <select class="form group btn btn-warning btn-form" name="tipo">
+                                 <option>Residente </option>
+                                 <option>Almacenista</option>
+                               </select>
+                            </div>
+                            <button type="submit" class="btn btn-warning btn-form">Registrar</button>
                           </form>
                     </div>
                 

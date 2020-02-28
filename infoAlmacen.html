@@ -99,8 +99,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Ver empleados:</h6>
-            <a class="collapse-item" href="login.html">Residenes</a>
-            <a class="collapse-item" href="register.html">Almacenistas</a>
+            <a class="collapse-item" href="infoResidentes.html">Residenes</a>
+            <a class="collapse-item" href="infoAlmacenistas.html">Almacenistas</a>
           </div>
         </div>
       </li>
@@ -119,8 +119,8 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Ver:</h6>
-            <a class="collapse-item" href="infoResidentes.html">Residenes</a>
-            <a class="collapse-item" href="infoAlmacenistas.html">Almacenistas</a>
+            <a class="collapse-item" href="login.html">Almacén</a>
+            <a class="collapse-item" href="register.html">Bodega</a>
           </div>
         </div>
       </li>
@@ -218,31 +218,44 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-12" id="casoduso">Registrar Obra</div>
+                <div class="col-sm-12" id="casoduso">Información de los Almacenes</div>
             </div>
             <div class="row">
                 
                     <div class="container form-user-f">
-                        <form class="form-user">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Nombre de la Obra">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Teléfono de la Obra">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Dirección de la Obra">
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputText1">Seleccionar Ing. Residente</label> <br>
+                        <table class="table table-borderless table-p">
+                            <thead class="thead">
+                              <tr>
+                              <th>Nombre del Almacén</th>
+                              <th>Nombre de la obra</th>
+                              <th>Encargado</th>
+                              <th>Teléfono</th>
+                              <th>Dirección</th>
                               
-                              <div class="alert alert-dark" role="alert">¡No Hay
-                                Residentes Disponibles!</div>
-                              <span name="id" value=" "></span>
-                              </select>
-                            </div>
-                            <button type="submit" class="btn btn-warning btn-form">Registrar Obra</button>
-                          </form>
+                            </tr>
+                           
+                            <tbody>
+                            
+                              <tr>
+                                <td>Almacén1</td>
+                                <td>Obra1</td>
+                                <td>Encargado1</td>
+                                <td>Telefóno1</td>
+                                <td>Dirección1</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>Almacén2</td>
+                                <td>Obra2</td>
+                                <td>Encargado2</td>
+                                <td>Telefóno2</td>
+                                <td>Dirección2</td>
+                                
+                              </tr>
+                          
+                            </tbody>
+                            </thead>
+                          </table>
                     </div>
                 
             </div>
