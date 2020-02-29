@@ -64,7 +64,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Registrar:</h6>
             <a class="collapse-item" href="registrarAlmacen.html">Almacén</a>
-            <a class="collapse-item" href="registrarBodega.html">Bodega</a>
+            <a class="collapse-item active" href="registrarBodega.html">Bodega</a>
           </div>
         </div>
       </li>
@@ -96,16 +96,16 @@
           <i class="fas fa-users"></i>
           <span>Empleados</span>
         </a>
-        <div id="collapseUtilities" class="collapse show" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Ver empleados:</h6>
-            <a class="collapse-item active" href="infoResidentes.html">Residentes</a>
+            <a class="collapse-item" href="infoResidentes.html">Residenes</a>
             <a class="collapse-item" href="infoAlmacenistas.html">Almacenistas</a>
           </div>
         </div>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="infoObras.html">
           <i class="fas fa-hard-hat"></i>
           <span>Obras</span></a>
@@ -218,7 +218,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-12" id="casoduso">Información de los Ing. Residentes</div>
+                <div class="col-sm-12" id="casoduso">Información de Bodegas</div>
             </div>
             <div class="row">
                 
@@ -226,31 +226,30 @@
                         <table class="table table-borderless table-p">
                             <thead class="thead">
                               <tr>
-                              <th>Nombre</th>
-                              <th>Teléfono</th>
-                              <th>Dirección</th>
-                              <th>DNI</th>
-                              <th>Estado</th>
+                              <th>Nombre de la bodega</th>
+                              <th>Direccion</th>
+                              <th>Telefono</th>
+                              <th>Detalles</th>
                               
                             </tr>
                            
                             <tbody>
                             
                               <tr>
-                                <td>Juan Fuentes</td>
-                                <td>3222222222</td>
-                                <td>av el rio</td>
-                                <td>10000000</td>
-                                <td>Libre</td>
-                                
+                                <td>Obra1</td>
+                                <td>Dirección1</td>
+                                <td>Telefóno1</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-ver"><a href="Bodegas.jsp?id=<%=e.getIdBodega()%>" ><font color=white>Ver <i class="far fa-eye"></font></a></i></button>
+                                </td>
                               </tr>
                               <tr>
-                                <td>Eduardo Cantillo</td>
-                                <td>3222222223</td>
-                                <td>av ceiba</td>
-                                <td>10000001</td>
-                                <td>Ocupado</td>
-                                
+                                <td>Obra2</td>
+                                <td>Dirección2</td>
+                                <td>Telefóno2</td>
+                                <td>
+                                  <button type="button" class="btn btn-warning btn-ver"><a href="Bodegas.jsp?id=<%=e.getIdBodega()%>" ><font color=white>Ver <i class="far fa-eye"></font></a></i></button>
+                                </td>
                               </tr>
                           
                             </tbody>
