@@ -13,12 +13,45 @@
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
+<script>
+  $(document).ready(function () {
+    $("#search1").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#table1 tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $("#search2").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#table2 tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $("#search3").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#table3 tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+</script>
 
 <body id="page-top">
 
@@ -56,7 +89,8 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
           <i class="fas fa-warehouse"></i>
           <span>Almacén/Bodega</span>
         </a>
@@ -92,7 +126,8 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+          aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-users"></i>
           <span>Empleados</span>
         </a>
@@ -112,7 +147,8 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+          aria-controls="collapsePages">
           <i class="fas fa-warehouse"></i>
           <span>Almacén/Bodega</span>
         </a>
@@ -144,62 +180,19 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-          <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
-          </button>          
+          </button>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
-
-            <!-- Nav Item - Alerts -->
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">0</span>
-              </a>
-              
-
-            <!-- Nav Item - Messages -->
-            
-            <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
-                <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">0</span>
-              </a>
-              <!-- Dropdown - Messages -->
-              
-            </li>
-
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
@@ -213,154 +206,153 @@
             </li>
 
           </ul>
-
         </nav>
 
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12" id="casoduso">Insumos Bodega X</div>
+          <div class="row">
+            <div class="col-sm-12" id="casoduso">Insumos Bodega X</div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-8 col-md-4">
+              <ul class="list-group lista">
+                <li class="list-group-item"><a href="#maquinarias">Ir a Maquinaria</a></li>
+                <li class="list-group-item"><a href="#equipos">Ir a Equipo</a></li>
+                <li class="list-group-item"><a href="#herramientas">Ir a Herramientas</a></li>
+              </ul>
             </div>
-            <div class="row">
-                <div class="col-12 col-sm-8 col-md-4">
-                    <ul class="list-group lista">
-                        <li class="list-group-item"><a href="#maquinarias">Ir a Maquinaria</a></li>
-                        <li class="list-group-item"><a href="#equipos">Ir a Equipo</a></li>
-                        <li class="list-group-item"><a href="#herramientas">Ir a Herramientas</a></li>
-                    </ul>
-                </div>
-                
+
+          </div>
+
+          <div class="row">
+            <div id="maquinarias" class="col-sm-12 tittle-center">Maquinaria</div>
+            <div class="container form-user-f">
+              <div class="form-group">
+                <input type="text" class="form-control" id="search1" placeholder="Buscar Maquinaria">
+              </div>
+              <table class="table table-borderless table-p" id="table1">
+                <thead class="thead">
+                  <tr>
+                    <th>Item</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Unidades</th>
+                    <th>Estadpo</th>
+                    <th>Observaciones</th>
+                  </tr>
+
+                <tbody>
+
+                  <tr>
+                    <td>Almacén1</td>
+                    <td>Obra1</td>
+                    <td>Encargado1</td>
+                    <td>Telefóno1</td>
+                    <td>Dirección1</td>
+
+                  </tr>
+                  <tr>
+                    <td>Almacén2</td>
+                    <td>Obra2</td>
+                    <td>Encargado2</td>
+                    <td>Telefóno2</td>
+                    <td>Dirección2</td>
+
+                  </tr>
+
+                </tbody>
+                </thead>
+              </table>
             </div>
-            
-            <div class="row">
-                    <div id="maquinarias" class="col-sm-12 tittle-center">Maquinaria</div>
-                    <div class="container form-user-f">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="search" placeholder="Buscar Maquinaria">
-                        </div>
-                        <table class="table table-borderless table-p">
-                            <thead class="thead">
-                              <tr>
-                              <th>Item</th>
-                              <th>Nombre</th>
-                              <th>Cantidad</th>
-                              <th>Unidades</th>
-                              <th>Estadpo</th>
-                              <th>Observaciones</th>
-                            </tr>
-                           
-                            <tbody>
-                            
-                              <tr>
-                                <td>Almacén1</td>
-                                <td>Obra1</td>
-                                <td>Encargado1</td>
-                                <td>Telefóno1</td>
-                                <td>Dirección1</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Almacén2</td>
-                                <td>Obra2</td>
-                                <td>Encargado2</td>
-                                <td>Telefóno2</td>
-                                <td>Dirección2</td>
-                                
-                              </tr>
-                          
-                            </tbody>
-                            </thead>
-                          </table>
-                    </div>
-                    <div id="equipos" class="col-sm-12 tittle-center">Equipos</div>
-                    <div class="container form-user-f">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="search" placeholder="Buscar Equipos">
-                        </div>
-                        <table class="table table-borderless table-p">
-                            <thead class="thead">
-                              <tr>
-                              <th>Item</th>
-                              <th>Nombre</th>
-                              <th>Cantidad</th>
-                              <th>Unidades</th>
-                              <th>Estado</th>
-                              <th>Observaciones</th>
-                            </tr>
-                           
-                            <tbody>
-                            
-                              <tr>
-                                <td>Almacén1</td>
-                                <td>Obra1</td>
-                                <td>Encargado1</td>
-                                <td>Telefóno1</td>
-                                <td>Dirección1</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Almacén2</td>
-                                <td>Obra2</td>
-                                <td>Encargado2</td>
-                                <td>Telefóno2</td>
-                                <td>Dirección2</td>
-                                
-                              </tr>
-                          
-                            </tbody>
-                            </thead>
-                          </table>
-                    </div>
-                    <div id="herramientas" class="col-sm-12 tittle-center">Herramientas</div>
-                    <div class="container form-user-f">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="search" placeholder="Buscar Herramientas">
-                        </div>
-                        <table class="table table-borderless table-p">
-                            <thead class="thead">
-                              <tr>
-                              <th>Item</th>
-                              <th>Nombre</th>
-                              <th>Cantidad</th>
-                              <th>Unidades</th>
-                              <th>Estadpo</th>
-                              <th>Observaciones</th>
-                            </tr>
-                           
-                            <tbody>
-                            
-                              <tr>
-                                <td>Almacén1</td>
-                                <td>Obra1</td>
-                                <td>Encargado1</td>
-                                <td>Telefóno1</td>
-                                <td>Dirección1</td>
-                                
-                              </tr>
-                              <tr>
-                                <td>Almacén2</td>
-                                <td>Obra2</td>
-                                <td>Encargado2</td>
-                                <td>Telefóno2</td>
-                                <td>Dirección2</td>
-                                
-                              </tr>
-                          
-                            </tbody>
-                            </thead>
-                          </table>
-                    </div>
-                
+            <div id="equipos" class="col-sm-12 tittle-center">Equipos</div>
+            <div class="container form-user-f">
+              <div class="form-group">
+                <input type="text" class="form-control" id="search2" placeholder="Buscar Equipos">
+              </div>
+              <table class="table table-borderless table-p" id="table2">
+                <thead class="thead">
+                  <tr>
+                    <th>Item</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Unidades</th>
+                    <th>Estado</th>
+                    <th>Observaciones</th>
+                  </tr>
+
+                <tbody>
+
+                  <tr>
+                    <td>Almacén1</td>
+                    <td>Obra1</td>
+                    <td>Encargado1</td>
+                    <td>Telefóno1</td>
+                    <td>Dirección1</td>
+
+                  </tr>
+                  <tr>
+                    <td>Almacén2</td>
+                    <td>Obra2</td>
+                    <td>Encargado2</td>
+                    <td>Telefóno2</td>
+                    <td>Dirección2</td>
+
+                  </tr>
+
+                </tbody>
+                </thead>
+              </table>
             </div>
-            <div class="row">
-                <div class="col-12 col-sm-8 col-md-4">
-                    <ul class="list-group lista">
-                        <li class="list-group-item"><a href="#maquinarias">Ir a Maquinaria</a></li>
-                        <li class="list-group-item"><a href="#equipos">Ir a Equipo</a></li>
-                        <li class="list-group-item"><a href="#herramientas">Ir a Herramientas</a></li>
-                    </ul>
-                </div>
-                
+            <div id="herramientas" class="col-sm-12 tittle-center">Herramientas</div>
+            <div class="container form-user-f">
+              <div class="form-group">
+                <input type="text" class="form-control" id="search3" placeholder="Buscar Herramientas">
+              </div>
+              <table class="table table-borderless table-p" id="table3">
+                <thead class="thead">
+                  <tr>
+                    <th>Item</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Unidades</th>
+                    <th>Estadpo</th>
+                    <th>Observaciones</th>
+                  </tr>
+
+                <tbody>
+
+                  <tr>
+                    <td>Almacén1</td>
+                    <td>Obra1</td>
+                    <td>Encargado1</td>
+                    <td>Telefóno1</td>
+                    <td>Dirección1</td>
+
+                  </tr>
+                  <tr>
+                    <td>Almacén2</td>
+                    <td>Obra2</td>
+                    <td>Encargado2</td>
+                    <td>Telefóno2</td>
+                    <td>Dirección2</td>
+
+                  </tr>
+
+                </tbody>
+                </thead>
+              </table>
             </div>
+
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-8 col-md-4">
+              <ul class="list-group lista">
+                <li class="list-group-item"><a href="#maquinarias">Ir a Maquinaria</a></li>
+                <li class="list-group-item"><a href="#equipos">Ir a Equipo</a></li>
+                <li class="list-group-item"><a href="#herramientas">Ir a Herramientas</a></li>
+              </ul>
+            </div>
+
+          </div>
 
         </div>
 
@@ -389,7 +381,8 @@
   </a>
 
   <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -406,6 +399,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
