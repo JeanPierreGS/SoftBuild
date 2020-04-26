@@ -36,16 +36,7 @@
         <div class="sidebar-brand-text mx-3">SoftBuild <sup>2</sup></div>
       </a>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-
+      
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -56,7 +47,8 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item active">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
           <i class="fas fa-warehouse"></i>
           <span>Almacén/Bodega</span>
         </a>
@@ -91,12 +83,43 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
+    
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-users"></i>
-          <span>Empleados</span>
+        <a class="nav-link" href="infoObras.html">
+          <i class="fas fa-hard-hat"></i>
+          <span>Obras</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+          aria-controls="collapsePages">
+          <i class="fas fa-warehouse"></i>
+          <span>Almacén/Bodega</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Ver:</h6>
+            <a class="collapse-item" href="infoAlmacenes.html">Almacén</a>
+            <a class="collapse-item" href="infoBodegas.html">Bodega</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Empleados
+      </div>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVerEmpleados"
+          aria-expanded="true" aria-controls="collapseVerEmpleados">
+          <i class="fas fa-users"></i>
+          <span>Ver</span>
+        </a>
+        <div id="collapseVerEmpleados" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Ver empleados:</h6>
             <a class="collapse-item" href="infoResidentes.html">Residenes</a>
@@ -106,21 +129,31 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="infoObras.html">
-          <i class="fas fa-hard-hat"></i>
-          <span>Obras</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAsignarEmpleados"
+          aria-expanded="true" aria-controls="collapseAsignarEmpleados">
+          <i class="fas fa-user-tag"></i>
+          <span>Asignar</span>
+        </a>
+        <div id="collapseAsignarEmpleados" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Asignar Empleados:</h6>
+            <a class="collapse-item" href="asignarAObra.html">Asignar a Obra</a>
+            <a class="collapse-item" href="asignarAAlmacen.html">Asignar a Almacén</a>
+          </div>
+        </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-warehouse"></i>
-          <span>Almacén/Bodega</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBajaEmpleados"
+          aria-expanded="true" aria-controls="collapseBajaEmpleados">
+          <i class="fas fa-user-times"></i>
+          <span>Dar de baja</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapseBajaEmpleados" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Ver:</h6>
-            <a class="collapse-item" href="infoAlmacenes.html">Almacén</a>
-            <a class="collapse-item" href="infoBodegas.html">Bodega</a>
+            <h6 class="collapse-header">Dar de baja empleados:</h6>
+            <a class="collapse-item" href="bajaResidentes.html">Residenes</a>
+            <a class="collapse-item" href="bajaAlmacenista.html">Almacenistas</a>
           </div>
         </div>
       </li>

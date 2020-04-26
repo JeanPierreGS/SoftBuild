@@ -109,7 +109,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Agregar:</h6>
-            <a class="collapse-item" href="agregarMaterialesAInventario.html">Materiales a Inventario</a>
+            <a class="collapse-item" href="agregarMaterialAInventario.html">Materiales a Inventario</a>
             <a class="collapse-item" href="agregarInsumosAAlmacen.html">Insumos a Almacén</a>
           </div>
         </div>
@@ -166,39 +166,41 @@
             <div class="row">
                 <div class="col-sm-12" id="casoduso">Almacenes a cargo</div>
             </div>
-            <div class="row">
-                
-                    <div class="container form-user-f">
-                        <table class="table table-borderless table-p table-responsive">
-                            <thead class="thead">
-                              <tr>
-                              <th>Nombre del Almacén</th>
-                              <th>Obra</th>
-                              <th>Encargado</th>
-                              <th>Teléfono</th>
-                              <th>Dirección</th>
-                              <th>Detalle</th>
-
+            <div class="row principal" style="height: 95%;">
+              <div class="container form-user-f col-sm-12 col-md-11 col-lg-10">
+                <form class="form-user col-sm-12 col-md-11 col-lg-10">
+                  <table class="table table-borderless table-p table-responsive">
+                    <thead class="thead">
+                      <tr>
+                      <th>Nombre del Almacén</th>
+                      <th>Obra</th>
+                      <th>Encargado</th>
+                      <th>Teléfono</th>
+                      <th>Dirección</th>
+                      <th>Detalle</th>
+      
+                    </tr>
+                  </thead>
+                    <tbody>
+                    
+                        <tr>
+                            <td>Almacén1</td>
+                            <td>Puente terminal</td>
+                            <td>Jean</td>
+                            <td>3222222222</td>
+                            <td>av 7</td>
+                            <td> 
+                                <button type="button" class="btn btn-warning btn-ver"><a href="insumosAlmacenAlmacenista.html" ><font color=white>Ver <i class="far fa-eye"></font></a></i></button>
+                            </td>
                             </tr>
-                           
-                            <tbody>
-                            
-                                <tr>
-                                    <td>Almacén1</td>
-                                    <td>Puente terminal</td>
-                                    <td>Jean</td>
-                                    <td>3222222222</td>
-                                    <td>av 7</td>
-                                    <td> 
-                                        <button type="button" class="btn btn-warning btn-ver"><a href="insumosBodega.html" ><font color=white>Ver <i class="far fa-eye"></font></a></i></button>
-                                    </td>
-                                    </tr>
-                          
-                            </tbody>
-                            </thead>
-                          </table>
-                    </div>
-                
+                  
+                    </tbody>
+                    
+                  </table>
+                </form>
+  
+              </div>
+  
             </div>
 
         </div>

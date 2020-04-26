@@ -130,16 +130,16 @@
         </div>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAsignarEmpleados"
           aria-expanded="true" aria-controls="collapseAsignarEmpleados">
           <i class="fas fa-user-tag"></i>
           <span>Asignar</span>
         </a>
-        <div id="collapseAsignarEmpleados" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseAsignarEmpleados" class="collapse show" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Asignar Empleados:</h6>
-            <a class="collapse-item" href="asignarAObra.html">Asignar a Obra</a>
+            <a class="collapse-item active" href="asignarAObra.html">Asignar a Obra</a>
             <a class="collapse-item" href="asignarAAlmacen.html">Asignar a Almacén</a>
           </div>
         </div>
@@ -206,6 +206,39 @@
 
           </ul>
         </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" id="casoduso">Asignar Ing. Residente a una Obra</div>
+            </div>
+
+            <div class="row principal-no-margin">
+
+                <div class="container form-user-f col-sm-10 col-md-10 col-lg-8">
+                    <form class="form-user col-sm-12 col-md-10 col-lg-8">
+
+                        <div class="form-group">
+                            <label for="exampleInputText1">Seleccionar Ing Residente</label> <br>
+
+                            <div class="alert alert-dark" role="alert">¡No Hay
+                                Ings Residentes Disponibles!</div>
+                            <span name="id" value=" "></span>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputText1">Seleccionar Obra</label> <br>
+
+                            <div class="alert alert-dark" role="alert">¡No Hay
+                                Obras Disponibles!</div>
+                            <span name="id" value=" "></span>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-warning btn-form">Asignar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
       </div>
       <!-- End of Main Content -->
 

@@ -14,12 +14,42 @@
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+<!-- JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-
+<script>
+    $(document).ready(function () {
+      $("#search1").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#table1 tr").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#search2").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#table2 tr").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#search3").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#table3 tr").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
 <body id="page-top">
 
   <!-- Page Wrapper -->
@@ -55,7 +85,7 @@
       </div>
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="infoAlmacenesAlmacenista.html">
           <i class="fas fa-warehouse"></i>
           <span>Almacenés</span></a>
@@ -69,11 +99,12 @@
         Registrar
       </div>
 
+
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="registrarInsumo.html">
             <i class="fas fa-hammer"></i>
-          <span>Insumo</span></a>
+          <span>Nuevo Insumo</span></a>
       </li>
 
       <!-- Divider -->
@@ -85,7 +116,7 @@
       </div>
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="prestamos.html">
             <i class="fas fa-truck"></i>
           <span>Almacén-Almacén</span></a>
@@ -108,7 +139,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Agregar:</h6>
-            <a class="collapse-item" href="agregarMaterialAInventario.html">Materiales a Inventario</a>
+            <a class="collapse-item" href="agregarMaterialesAInventario.html">Materiales a Inventario</a>
             <a class="collapse-item" href="agregarInsumosAAlmacen.html">Insumos a Almacén</a>
           </div>
         </div>
@@ -163,66 +194,151 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-12" id="casoduso">Préstamo de insumo de Almacén a Almacén</div>
+              <div class="col-sm-12" id="casoduso">Insumos Almacén X</div>
             </div>
             <div class="row">
-                
-                    <div class="container form-user-f">
-                        <table class="table table-borderless table-p table-responsive">
-                            <thead class="thead">
-                              <tr>
-                              <th>Origen</th>
-                              <th>Destino</th>
-                              <th>Transportador</th>
-                              <th>Placa  del vehículo</th>
-                              <th>Insumo</th>
-                              <th>Cantidad</th>
-                              
-                            </tr>
-                           
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <select class="form group btn btn-warning btn-form" name="origen">                   
-                                      <option>Almacén1</option>
-                                     </select>
-                                   </td>
-                                  <td>
-                                    <select class="form group btn btn-warning btn-form" name="destino">
-                                      <option>Almacén2</option>
-                                      <option>Almacén3</option>
-                                     </select>
-                                  </td>
-                                <td><input type="text" class="form-control" name="transportador" placeholder="Servientrega"></td>
-                                <td><input type="text" class="form-control" name="placa" placeholder="UUU-567"></td>
-                                <td>
-                                  <select class="btn btn-warning btn-form select" name="destino">
-                                    <option>Martillo*2</option>
-                                    <option>Pala*10</option>
-                                    <option>UDP</option>
-                                    <option>Arena 20kg</option>
-                                    <option>Arena 60kg</option>
-                                    <option>Cemento 40kg</option>
-                                </select>
-                                </td>
-                                <td>
-                                  <input type="text" class="form-control" name="placa" placeholder="10"></td>
-                                </td>
-
-                              </tr>
-                            </tbody>
-                            </thead>
-                          </table>
-
-                                <div class="col-sm-12 col-md-3">
-                                    <button type="submit" class="btn btn-warning" style="margin-top: 1em;">Realizar Préstamo</button>
-                                </div>
-                          
-                    </div>
-
+              <div class="col-12 col-sm-8 col-md-4">
+                <ul class="list-group lista">
+                  <li class="list-group-item"><a href="#maquinarias">Ir a Maquinaria</a></li>
+                  <li class="list-group-item"><a href="#equipos">Ir a Equipo</a></li>
+                  <li class="list-group-item"><a href="#herramientas">Ir a Herramientas</a></li>
+                </ul>
+              </div>
+  
             </div>
-
-        </div>
+  
+            <div class="row">
+              <div id="maquinarias" class="col-sm-12 tittle-center">Maquinaria</div>
+              <div class="container form-user-f">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search1" placeholder="Buscar Maquinaria">
+                </div>
+                <table class="table table-borderless table-p" id="table1">
+                  <thead class="thead">
+                    <tr>
+                      <th>Item</th>
+                      <th>Nombre</th>
+                      <th>Cantidad</th>
+                      <th>Unidades</th>
+                      <th>Estadpo</th>
+                      <th>Observaciones</th>
+                    </tr>
+  
+                  <tbody>
+  
+                    <tr>
+                      <td>1</td>
+                      <td>Martillo</td>
+                      <td>120</td>
+                      <td>un</td>
+                      <td>deterioro</td>
+  
+                    </tr>
+                    <tr>
+                      <td>Almacén2</td>
+                      <td>Obra2</td>
+                      <td>Encargado2</td>
+                      <td>Telefóno2</td>
+                      <td>Dirección2</td>
+  
+                    </tr>
+  
+                  </tbody>
+                  </thead>
+                </table>
+              </div>
+              <div id="equipos" class="col-sm-12 tittle-center">Equipos</div>
+              <div class="container form-user-f">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search2" placeholder="Buscar Equipos">
+                </div>
+                <table class="table table-borderless table-p" id="table2">
+                  <thead class="thead">
+                    <tr>
+                      <th>Item</th>
+                      <th>Nombre</th>
+                      <th>Cantidad</th>
+                      <th>Unidades</th>
+                      <th>Estado</th>
+                      <th>Observaciones</th>
+                    </tr>
+  
+                  <tbody>
+  
+                    <tr>
+                      <td>Almacén1</td>
+                      <td>Obra1</td>
+                      <td>Encargado1</td>
+                      <td>Telefóno1</td>
+                      <td>Dirección1</td>
+  
+                    </tr>
+                    <tr>
+                      <td>Almacén2</td>
+                      <td>Obra2</td>
+                      <td>Encargado2</td>
+                      <td>Telefóno2</td>
+                      <td>Dirección2</td>
+  
+                    </tr>
+  
+                  </tbody>
+                  </thead>
+                </table>
+              </div>
+              <div id="herramientas" class="col-sm-12 tittle-center">Herramientas</div>
+              <div class="container form-user-f">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search3" placeholder="Buscar Herramientas">
+                </div>
+                <table class="table table-borderless table-p" id="table3">
+                  <thead class="thead">
+                    <tr>
+                      <th>Item</th>
+                      <th>Nombre</th>
+                      <th>Cantidad</th>
+                      <th>Unidades</th>
+                      <th>Estadpo</th>
+                      <th>Observaciones</th>
+                    </tr>
+  
+                  <tbody>
+  
+                    <tr>
+                      <td>Almacén1</td>
+                      <td>Obra1</td>
+                      <td>Encargado1</td>
+                      <td>Telefóno1</td>
+                      <td>Dirección1</td>
+  
+                    </tr>
+                    <tr>
+                      <td>Almacén2</td>
+                      <td>Obra2</td>
+                      <td>Encargado2</td>
+                      <td>Telefóno2</td>
+                      <td>Dirección2</td>
+  
+                    </tr>
+  
+                  </tbody>
+                  </thead>
+                </table>
+              </div>
+  
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-8 col-md-4">
+                <ul class="list-group lista">
+                  <li class="list-group-item"><a href="#maquinarias">Ir a Maquinaria</a></li>
+                  <li class="list-group-item"><a href="#equipos">Ir a Equipo</a></li>
+                  <li class="list-group-item"><a href="#herramientas">Ir a Herramientas</a></li>
+                </ul>
+              </div>
+  
+            </div>
+  
+          </div>
 
       </div>
       <!-- End of Main Content -->

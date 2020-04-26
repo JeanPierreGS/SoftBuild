@@ -13,13 +13,25 @@
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+<!-- JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-
+<script>
+  $(document).ready(function () {
+    $("#search1").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#table1 tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+</script>
 <body id="page-top">
 
   <!-- Page Wrapper -->
@@ -73,7 +85,7 @@
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="registrarInsumo.html">
-            <i class="fas fa-hammer"></i>
+          <i class="fas fa-hammer"></i>
           <span>Nuevo Insumo</span></a>
       </li>
 
@@ -88,7 +100,7 @@
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link" href="prestamos.html">
-            <i class="fas fa-truck"></i>
+          <i class="fas fa-truck"></i>
           <span>Almacén-Almacén</span></a>
       </li>
 
@@ -102,8 +114,9 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-tools"></i>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
+          <i class="fas fa-tools"></i>
           <span>Insumos</span>
         </a>
         <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -164,48 +177,54 @@
 
         <div class="container">
           <div class="row">
-              <div class="col-sm-12" id="casoduso">Agregar a Inventario</div>
+            <div class="col-sm-12" id="casoduso">Agregar a Inventario</div>
           </div>
-          <div class="row">
-            
-                  <div class="container form-user-f">
-                    <div class="form-group">
-                      <input type="text" class="form-control col-sm-4 col-md-2" placeholder="Buscar Material" style="border-radius: 15;">
-                  </div>
-                      <table class="table table-borderless table-p table-responsive">
-                          <thead class="thead">
-                            <tr>
-                            <th>Material</th>
-                            <th>Cantidad</th>
-                            <th></th>
+          <div class="row principal" style="height: 95%;">
+            <div class="container form-user-f col-sm-12 col-md-11 col-lg-10">
+              <form class="form-user col-sm-12 col-md-11 col-lg-10 p-2 p-md-4 p-lg-4">
+                <div class="form-group">
+                  <input type="text" class="form-control col-sm-4 col-md-3" placeholder="Buscar Material"
+                    style="border-radius: 15;" id="search1">
+                </div>
+                <table class="table table-borderless table-p" id="table1">
+                  <thead class="thead">
+                    <tr>
+                      <th>Material</th>
+                      <th>Cantidad</th>
+                      <th></th>
 
-                          </tr>
-                         
-                          <tbody>
-                          
-                              <tr>
-                                  <td>Arena *50kg</td>
-                                  <td> <input type="text" class="form-control" name="cantidad" placeholder="4"></td>
-                                  <td> 
-                                    <button type="button" class="btn btn-warning btn-ver"><a href="insumosBodega.html" ><font color=white>Agregar Cantidad<i class="fas fa-plus"></i></font></a></i></button>
-                                </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Cemento *40kg</td>
-                                    <td> <input type="text" class="form-control" name="cantidad" placeholder="4"></td>
-                                    <td> 
-                                      <button type="button" class="btn btn-warning btn-ver"><a href="insumosBodega.html" ><font color=white>Agregar Cantidad<i class="fas fa-plus"></i></font></a></i></button>
-                                  </td>
-                                    </tr>
-                        
-                          </tbody>
-                          </thead>
-                        </table>
-                  </div>
-              
+                    </tr>
+
+                  <tbody>
+
+                    <tr>
+                      <td>Arena *50kg</td>
+                      <td> <input type="text" class="form-control" name="cantidad" placeholder="4"></td>
+                      <td>
+                        <button type="button" class="btn btn-warning btn-ver"><a href="insumosBodega.html">
+                            <font color=white>Agregar Cantidad<i class="fas fa-plus"></i></font>
+                          </a></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Cemento *40kg</td>
+                      <td> <input type="text" class="form-control" name="cantidad" placeholder="4"></td>
+                      <td>
+                        <button type="button" class="btn btn-warning btn-ver"><a href="insumosBodega.html">
+                            <font color=white>Agregar Cantidad<i class="fas fa-plus"></i></font>
+                          </a></i></button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                  </thead>
+                </table>
+              </form>
+            </div>
           </div>
 
-      </div>
+
+        </div>
 
       </div>
       <!-- End of Main Content -->
@@ -232,7 +251,8 @@
   </a>
 
   <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
