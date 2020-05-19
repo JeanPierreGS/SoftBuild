@@ -72,7 +72,7 @@
             </div>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="controlInsumo.html">
                     <i class="fas fa-warehouse"></i>
                     <span>Control Almacenes</span></a>
@@ -86,12 +86,11 @@
                 Registrar
             </div>
 
-
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="registrarInsumo.html">
                     <i class="fas fa-hammer"></i>
-                    <span>Nuevo Insumo</span></a>
+                    <span>Insumo</span></a>
             </li>
 
             <!-- Divider -->
@@ -184,32 +183,52 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12" id="casoduso">Registrar Nuevo Insumo</div>
+                        <div class="col-sm-12" id="casoduso">Control de Almacén</div>
                     </div>
-                    <div class="row principal-no-margin">
-
-                        <div class="container form-user-f col-sm-10 col-md-10 col-lg-8">
-                            <form class="form-user col-sm-12 col-md-10 col-lg-8">
+                    <div class="row principal" style="height: 95%;">
+                        <div class="container form-user-f col-sm-12 col-md-11 col-lg-10">
+                            
+                            <form class="form-user col-sm-12 col-md-11 col-lg-10">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Nombre">
+                                    <input type="text" class="form-control buscar" placeholder="Buscar">
                                 </div>
-                                <div class="form-group">
-                                    <textarea name="description" maxlength="400" placeholder="Descripción"
-                                        class="form-control textInsumo"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Unidades">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputText1">Tipo de Insumo</label> <br>
-                                    <select class="form group btn btn-warning btn-form" name="tipo">
-                                        <option>Equipo </option>
-                                        <option>Herramienta</option>
-                                        <option>Material</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-warning btn-form">Registrar</button>
+                                <table class="table table-borderless table-p tabla">
+                                    <thead class="thead">
+                                        <tr>
+                                            <th>Insumo</th>
+                                            <th>Unidades</th>
+                                            <th>Acción</th>
+                                        </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td>Martillo</td>
+                                            <td>Un</td>
+                                            <td><button type="button" class="btn btn-warning btn-ver"
+                                                    data-toggle="modal" data-target="#exampleModal">
+                                                    <font color=white>Ver <i class="far fa-eye"></font></i>
+                                                </button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>UDP</td>
+                                            <td>Un</td>
+                                            <td><button type="button" class="btn btn-warning btn-ver"
+                                                    data-toggle="modal" data-target="#exampleModal">
+                                                    <font color=white>Ver <i class="far fa-eye"></font></i>
+                                                </button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arena</td>
+                                            <td>x10KG</td>
+                                            <td><button type="button" class="btn btn-warning btn-ver"
+                                                    data-toggle="modal" data-target="#exampleModal">
+                                                    <font color=white>Ver <i class="far fa-eye"></font></i>
+                                                </button></td>
+                                        </tr>
+                                    </tbody>
+                                    </thead>
+                                </table>
                             </form>
+
                         </div>
 
                     </div>
@@ -260,6 +279,54 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Control Insumo XYZ</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group text-center">
+                                    <h4>Entrada</h4>
+                                    <input type="number" class="form-control" placeholder="Cantidad Entrada">
+                                    <input type="text" class="form-control" placeholder="Unidad Entrada">
+                                    <input type="text" class="form-control" placeholder="Remisión Entrada">
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <h4>Salida</h4>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" placeholder="Cantidad Salida">
+                                    <input type="text" class="form-control" placeholder="Unidad Salida">
+                                    <input type="text" class="form-control" placeholder="Destino Salida">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Descripción" maxlength="200" style="height: 105px !important;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -276,6 +343,8 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+
+    <script src="js/controlInsumoTabla.js"></script>
 
 </body>
 

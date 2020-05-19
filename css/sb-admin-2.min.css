@@ -10605,3 +10605,7 @@ body.sidebar-toggled footer.sticky-footer {
 #content {
     background-color: #ffffff;
 }
+
+.textInsumo {
+    height : 110px !important;
+}
